@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/yourTrips"
+            android:title="Your Trips"
+            android:icon="@drawable/all_trips_icon"/>
+        <item
+            android:id="@+id/yourBucketList"
+            android:title="Your Bucket List"
+            android:icon="@drawable/bucket_list_icon"/>
+        <item
+            android:id="@+id/addFriends"
+            android:title="Add Friends"
+            android:icon="@drawable/contacts_icon"/>
+
+        <item
+            android:id="@+id/thingsToPackTemplates"
+            android:title="Things to Pack Templates"
+            android:icon="@drawable/pack_list_icon"/>
+
+        <item
+            android:id="@+id/aboutYourTripPal"
+            android:title="About"
+            android:icon="@drawable/about_icon"/>
+        <item
+            android:id="@+id/sendFeedback"
+            android:title="Send Feedback"
+            android:icon="@drawable/feedback_icon"/>
+        <item
+            android:id="@+id/rateApp"
+            android:title="Rate this App"
+            android:icon="@drawable/rate_app_icon"/>
+        <item
+            android:id="@+id/settings"
+            android:title="Settings"
+            android:icon="@drawable/ic_setting"/>
+        <!--<item-->
+            <!--android:id="@+id/help"-->
+            <!--android:title="Help"-->
+            <!--android:icon="@drawable/help_icon"/>-->
+
+    </group>
+</menu>

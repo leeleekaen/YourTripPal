@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/background_plain_blue_white">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/linearLayoutStdTTPCategory"
+        android:background="@color/design_fab_shadow_start_color">
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:id="@+id/textViewStdTTPCategory"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/White"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="hi hello"
+            android:layout_gravity="center_vertical"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="20dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imageViewStdTTPAddItems"
+            android:src="@drawable/plus_icon"
+            android:background="@drawable/date_button_background"
+            android:tint="@color/inputScreenTitle"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deselect all"
+        android:id="@+id/checkBoxStdTTPselectAll"
+        android:layout_below="@+id/linearLayoutStdTTPCategory"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/White"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayoutStdTTPTemsList"
+        android:padding="16dp"
+        android:layout_below="@+id/checkBoxStdTTPselectAll">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/recyclerViewStdTTP"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

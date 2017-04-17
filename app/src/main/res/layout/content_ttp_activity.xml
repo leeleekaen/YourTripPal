@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_plain_blue_white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ThingsToPackActivity"
+    tools:showIn="@layout/activity_things_to_pack"
+    >
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabTTPAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/more_icon"
+        app:backgroundTint="#7e7f7f"
+        android:tint="@color/White"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayoutTTPAddItem"
+
+        android:padding="5dp"
+        android:background="@drawable/item_entry_background">
+
+        <!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px"/>
+
+        <!-- :nextFocusUp and :nextFocusLeft have been set to the id of this component
+        to prevent the dummy from receiving focus again -->
+        <AutoCompleteTextView android:id="@+id/autotext"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:nextFocusUp="@id/autotext"
+            android:nextFocusLeft="@id/autotext"/>
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="38dp"
+            android:ems="10"
+            android:id="@+id/editTextTTPItem"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:hint="Enter Item"
+            android:textSize="15sp"
+            android:layout_margin="5dp" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/buttonTTPAddItem"
+            android:src="@drawable/plus_icon"
+            android:layout_toRightOf="@+id/editTextTTPItem"
+            android:textSize="14sp"
+            android:textColor="#494b43"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:layout_alignBottom="@+id/editTextTTPItem"
+            android:layout_margin="5dp"
+            android:background="@drawable/date_button_background" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imageButtonTTPSortLexicographically"
+            android:src="@drawable/sorting_a_to_z_icon"
+            android:layout_toRightOf="@+id/buttonTTPAddItem"
+            android:layout_toEndOf="@+id/buttonTTPAddItem"
+            android:layout_margin="5dp"
+            android:layout_alignBottom="@+id/editTextTTPItem"
+            android:background="@drawable/date_button_background" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Review Done"
+            android:layout_below="@+id/editTextTTPItem"
+            android:layout_alignParentRight="true"
+            android:id="@+id/buttonTTPReviewDone"
+            android:padding="5dp"
+            android:visibility="invisible"
+            android:background="@drawable/button_background"
+            android:textColor="@color/White" />
+
+    </RelativeLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayoutTTPItemsList"
+        android:layout_below="@+id/relativeLayoutTTPAddItem">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/recyclerViewThingsToPack"
+            android:layout_below="@+id/linearLayoutToDo">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/background_white_fabric_texture">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Itinerary"
+        android:id="@+id/buttonLNAgoToItinerary"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorAccent"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:textColor="@color/bright_foreground_material_dark"
+        android:textStyle="bold|italic"
+        android:elevation="@dimen/abc_button_inset_horizontal_material" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/buttonLNAsend"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/holo_orange_dark"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:textColor="@color/bright_foreground_material_dark" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Say hello with a picture?"
+        android:id="@+id/checkBoxLNAtakePic"
+        android:layout_above="@+id/buttonLNAsend"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:textColor="#9236b9"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+</RelativeLayout>

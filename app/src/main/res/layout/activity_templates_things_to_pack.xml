@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/background_white_fabric_texture">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You can create packing list for each of your trips. "
+        android:id="@+id/textViewTTPTemplateInfo"
+        android:textColor="@color/inputScreenTitle"
+        android:layout_margin="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutTTPTemplateSelectTrip"
+        android:orientation="horizontal"
+        android:layout_below="@+id/textViewTTPTemplateInfo"
+        android:layout_marginBottom="5dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select a Trip"
+            android:id="@+id/textView3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/screenSecondaryTitle"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner1TTPTemplateTripList"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Add a Trip"
+            android:id="@+id/buttonTTPTemplateGoORAdd"
+            android:background="@drawable/button_background"
+            android:textColor="@color/White"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click to view the Packing Templates: "
+        android:id="@+id/textViewTTPTemplateViewInfo"
+        android:layout_below="@+id/linearLayoutTTPTemplateSelectTrip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/screenSecondaryTitle"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView_packing_templates"
+        android:layout_below="@+id/textViewTTPTemplateViewInfo"
+        android:layout_marginTop="10dp" />
+
+
+
+</RelativeLayout>

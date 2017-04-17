@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_white_fabric_texture">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="lshankarrao.travelatease1.MainActivity">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Where are you going?"
+            android:id="@+id/textViewAddEditTripStartPlace"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#4a77fe"
+            android:layout_marginBottom="5dp" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Add a Place"
+            android:id="@+id/buttonAETAddPlace"
+            android:layout_below="@+id/textViewAddEditTripStartPlace"
+            android:layout_marginTop="5dp"
+            android:textColor="#4a77fe"
+            android:background="@drawable/date_button_background"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewAETPlace"
+            android:layout_below="@+id/buttonAETAddPlace"
+            android:layout_marginLeft="5dp"
+            android:textSize="16sp"
+            android:textColor="#484992"
+            android:textStyle="bold"
+            android:background="#b5c8ff"
+            android:layout_marginTop="5dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewAETLocImg"
+            android:src="@drawable/ic_location"
+            android:layout_below="@+id/textViewAETPlace"
+            android:layout_alignBottom="@+id/textViewAETPlaceAddress"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewAETPlaceAddress"
+            android:layout_below="@+id/textViewAETPlace"
+            android:layout_toRightOf="@+id/imageViewAETLocImg"
+            android:gravity="bottom"
+            android:textColor="#484992"
+            android:textSize="13sp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trip Title: "
+            android:id="@+id/textViewAETTitleInfo"
+            android:layout_below="@+id/textViewAETPlaceAddress"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#4a77fe"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px"/>
+
+
+        <AutoCompleteTextView android:id="@+id/autotext"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:nextFocusUp="@id/autotext"
+            android:nextFocusLeft="@id/autotext"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextAddEditTripTitle"
+            android:layout_below="@+id/textViewAETPlaceAddress"
+            android:layout_toRightOf="@+id/textViewAETTitleInfo"
+            android:layout_alignBaseline="@+id/textViewAETTitleInfo"
+            android:hint="Trip Title"
+            android:textColor="#484992"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="When is your trip?"
+            android:id="@+id/textViewAETTimeDetails"
+            android:layout_below="@+id/editTextAddEditTripTitle"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#4a77fe"
+            android:layout_marginTop="20dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Starts"
+            android:id="@+id/textViewAETStartTimings"
+            android:layout_below="@+id/textViewAETTimeDetails"
+            android:layout_alignParentLeft="true"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#4a77fe"
+            android:layout_marginLeft="5dp" />
+
+        <EditText
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextAddEditTripStartDate"
+            android:layout_below="@+id/textViewAETStartTimings"
+            android:layout_alignParentLeft="true"
+            android:hint="mm/dd/yyyy"
+            android:textColor="#484992"
+            android:textSize="16sp"
+            android:layout_marginLeft="5dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonAddEditTripStartDate"
+            android:src="@drawable/ic_calendar_date"
+            android:background="@drawable/date_button_background"
+            android:layout_alignTop="@+id/editTextAddEditTripStartDate"
+            android:layout_toRightOf="@+id/editTextAddEditTripStartDate"
+            android:layout_toEndOf="@+id/editTextAddEditTripStartDate" />
+
+        <EditText
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextAddEditTripStartTime"
+            android:layout_below="@+id/textViewAETStartTimings"
+            android:layout_toRightOf="@id/imageButtonAddEditTripStartDate"
+            android:hint="hh:mm"
+            android:layout_marginLeft="15dp"
+            android:textColor="#484992"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonAddEditTripStartTime"
+            android:src="@drawable/ic_calendar_time"
+            android:background="@drawable/date_button_background"
+            android:layout_alignTop="@+id/editTextAddEditTripStartTime"
+            android:layout_toRightOf="@+id/editTextAddEditTripStartTime"
+            android:layout_toEndOf="@+id/editTextAddEditTripStartTime" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ends"
+            android:id="@+id/textViewAETEndTimings"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#4a77fe"
+            android:layout_below="@+id/editTextAddEditTripStartDate"
+            android:layout_marginLeft="5dp" />
+
+        <EditText
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextAddEditTripEndDate"
+            android:layout_below="@+id/textViewAETEndTimings"
+            android:layout_alignParentLeft="true"
+            android:hint="mm/dd/yyyy"
+            android:textColor="#484992"
+            android:textSize="16sp"
+            android:layout_marginLeft="5dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonAddEditTripEndDate"
+            android:src="@drawable/ic_calendar_date"
+            android:background="@drawable/date_button_background"
+            android:layout_below="@id/textViewAETEndTimings"
+            android:layout_alignTop="@+id/editTextAddEditTripEndDate"
+            android:layout_toRightOf="@+id/editTextAddEditTripEndDate"
+            android:layout_toEndOf="@+id/editTextAddEditTripEndDate" />
+
+        <EditText
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextAddEditTripEndTime"
+            android:layout_below="@+id/textViewAETEndTimings"
+            android:layout_toRightOf="@id/imageButtonAddEditTripEndDate"
+            android:hint="hh:mm"
+            android:layout_marginLeft="15dp"
+            android:textColor="#484992"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonAddEditTripEndTime"
+            android:src="@drawable/ic_calendar_time"
+            android:background="@drawable/date_button_background"
+            android:layout_below="@id/textViewAETEndTimings"
+            android:layout_alignTop="@+id/editTextAddEditTripEndTime"
+            android:layout_toRightOf="@+id/editTextAddEditTripEndTime"
+            android:layout_toEndOf="@+id/editTextAddEditTripEndTime" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Trip Themes"
+            android:id="@+id/textViewAddEditTripThemeInfo"
+            android:layout_below="@+id/editTextAddEditTripEndTime"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#4a77fe"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Outdoor Adventure"
+            android:id="@+id/checkBox0TripTheme"
+            android:layout_below="@+id/textViewAddEditTripThemeInfo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="false"
+            android:textColor="#484992"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sightseeing"
+            android:id="@+id/checkBox1TripTheme"
+            android:layout_alignTop="@+id/checkBox0TripTheme"
+            android:layout_toRightOf="@+id/checkBox0TripTheme"
+            android:layout_toEndOf="@+id/checkBox0TripTheme"
+            android:checked="false"
+            android:textColor="#484992"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camping/Wildlife"
+            android:id="@+id/checkBox2TripTheme"
+            android:layout_below="@+id/checkBox0TripTheme"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="false"
+            android:textColor="#484992"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Business/Educational"
+            android:id="@+id/checkBox3TripTheme"
+            android:layout_alignTop="@+id/checkBox2TripTheme"
+            android:layout_toRightOf="@+id/checkBox2TripTheme"
+            android:layout_toEndOf="@+id/checkBox2TripTheme"
+            android:layout_alignLeft="@+id/checkBox1TripTheme"
+            android:checked="false"
+            android:textColor="#484992"
+            android:textSize="14sp" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Indoor Activities"
+            android:id="@+id/checkBox4TripTheme"
+            android:layout_below="@+id/checkBox2TripTheme"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="false"
+            android:textColor="#484992"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Party/Art/Culture"
+            android:id="@+id/checkBox5TripTheme"
+            android:layout_alignTop="@+id/checkBox4TripTheme"
+            android:layout_toRightOf="@+id/checkBox4TripTheme"
+            android:layout_toEndOf="@+id/checkBox4TripTheme"
+            android:layout_alignLeft="@+id/checkBox1TripTheme"
+            android:checked="false"
+            android:textColor="#484992"
+            android:textSize="14sp" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Water Activities"
+            android:id="@+id/checkBox6TripTheme"
+            android:layout_below="@+id/checkBox4TripTheme"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="false"
+            android:textColor="#484992"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Snow Activities"
+            android:id="@+id/checkBox7TripTheme"
+            android:layout_alignTop="@+id/checkBox6TripTheme"
+            android:layout_toRightOf="@+id/checkBox6TripTheme"
+            android:layout_toEndOf="@+id/checkBox6TripTheme"
+            android:layout_alignLeft="@+id/checkBox1TripTheme"
+            android:checked="false"
+            android:textColor="#484992"
+            android:textSize="14sp" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/editTextAddEditTripNotes"
+            android:layout_below="@+id/checkBox6TripTheme"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:hint="Notes(Optional)"
+            android:textColor="#484992"
+            android:textSize="14sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Done"
+            android:id="@+id/buttonAddEditTripDone"
+            android:layout_below="@+id/editTextAddEditTripNotes"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/button_background"
+            android:textColor="@color/White"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+</ScrollView>

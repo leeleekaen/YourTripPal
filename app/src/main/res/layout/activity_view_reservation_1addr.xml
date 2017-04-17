@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_white_fabric_texture">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Kabali Movie Time"
+        android:id="@+id/textViewRes1addrTitleOrName"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AMC Mercado \n 456 Madera Sunnyvale Ca 94086"
+        android:id="@+id/textView1addrPlaceNameAddress"
+        android:layout_below="@+id/textViewRes1addrTitleOrName"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#e86c0d" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Starts"
+        android:id="@+id/textView1addrStarts"
+        android:layout_below="@+id/textView1addrPlaceNameAddress"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp"
+        android:textIsSelectable="false"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:textColor="#1793ac" />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Ends"
+        android:id="@+id/textView1addrEnds"
+        android:layout_below="@+id/textView1addrPlaceNameAddress"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="20sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:textColor="#446744"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="9:30 AM"
+        android:id="@+id/textView1addrStartTime"
+        android:layout_below="@+id/textView1addrStarts"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="15sp"
+        android:layout_marginLeft="45dp"
+        android:gravity="center"
+        android:background="#b0f0fd"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="12:30 PM"
+        android:id="@+id/textView1addrEndTime"
+        android:layout_below="@+id/textView1addrEnds"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="15sp"
+        android:layout_marginRight="45dp"
+        android:gravity="center"
+        android:background="#abfcac"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="6th April 16"
+        android:id="@+id/textView1addrStartDate"
+        android:layout_below="@+id/textView1addrStartTime"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="45dp"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="#1793ac"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="6th April 16"
+        android:id="@+id/textView1addrSingleDate"
+        android:layout_below="@+id/textView1addrStartTime"
+        android:layout_toRightOf="@+id/textView1addrStartDate"
+        android:gravity="center"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textColor="#01f2b1"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="6th April 16"
+        android:id="@+id/textView1addrEndDate"
+        android:layout_below="@+id/textView1addrStartTime"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="45dp"
+        android:textSize="15sp"
+        android:textColor="#446744"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conf#: 123456789"
+        android:id="@+id/textView1addrConfNumber"
+        android:layout_below="@+id/textView1addrStartDate"
+        android:layout_alignLeft="@+id/textView1addrStartDate"
+        android:layout_alignStart="@+id/textView1addrStartDate"
+        android:textColor="#e86c0d" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bring ticket Printouts without fail"
+        android:id="@+id/textView1addrNotes"
+        android:layout_below="@+id/textView1addrConfNumber"
+        android:layout_alignLeft="@+id/textView1addrConfNumber"
+        android:layout_alignStart="@+id/textView1addrConfNumber"
+        android:textColor="#e86c0d"
+        android:layout_marginRight="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Add Attachment"
+        android:id="@+id/button1addrAttachment"
+        android:layout_marginTop="51dp"
+        android:layout_below="@+id/textView1addrNotes"
+        android:layout_centerHorizontal="true"
+        android:background="#01f2b1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout>

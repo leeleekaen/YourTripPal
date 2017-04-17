@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_plain_blue_white">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayoutAFFaddContact"
+
+        android:background="#ffffff"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter the contact details below"
+            android:id="@+id/textViewAFFAddContact"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:textColor="#182ebe" />
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px"/>
+
+        <AutoCompleteTextView android:id="@+id/autotext"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:nextFocusUp="@id/autotext"
+            android:nextFocusLeft="@id/autotext"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextAFFName"
+        android:layout_below="@+id/textViewAFFAddContact"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Name"
+        android:textSize="16sp"
+        android:textColor="#182ebe" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/editTextAFFEmailId"
+            android:hint="Email ID"
+            android:textSize="16sp"
+            android:layout_alignTop="@+id/editTextAFFName"
+            android:layout_toRightOf="@+id/editTextAFFName"
+            android:layout_toEndOf="@+id/editTextAFFName"
+            android:textColor="#182ebe" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="ADD"
+            android:id="@+id/buttonAFFAdd"
+            android:layout_below="@+id/editTextAFFEmailId"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="14sp"
+            android:textColor="@color/White"
+            android:layout_marginRight="15dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_background" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scroll below to select contacts to share your itinerary with."
+        android:id="@+id/textViewAFFGeneralInfo"
+        android:layout_below="@+id/relativeLayoutAFFaddContact"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:textStyle="bold"
+        android:layout_marginRight="5dp"
+        android:textColor="@color/White" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select all"
+        android:id="@+id/checkBoxAFFselectAll"
+        android:layout_below="@+id/textViewAFFGeneralInfo"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:textSize="14sp"
+        android:checked="false"
+        android:textColor="@color/White"
+        android:textStyle="bold" />
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayoutrvContacts"
+        android:layout_below="@+id/checkBoxAFFselectAll">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_height="240dp"
+            android:layout_width="match_parent"
+            android:id="@+id/recyclerViewContacts"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remember Choice for Trip"
+        android:id="@+id/checkBox2"
+        android:checked="false"
+        android:layout_below="@+id/linearLayoutrvContacts"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="DONE"
+        android:id="@+id/buttonAFFDone"
+        android:layout_below="@+id/linearLayoutrvContacts"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/button_background"
+        android:textSize="14sp"
+        android:textColor="@color/White"
+        android:layout_marginRight="15dp"
+        android:textStyle="bold"
+        android:visibility="invisible"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutAFFThingsToPack"
+        android:layout_below="@+id/buttonAFFDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/date_button_background"
+        android:clickable="true"
+        android:padding="2dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="30dp">
+
+
+
+        <TextView
+            android:id="@+id/textViewAFFThingsToPack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="REVIEW THINGS TO PACK"
+            android:textStyle="bold"
+            android:padding="5dp" />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="true"
+            android:maxHeight="30dp"
+            android:maxWidth="30dp"
+            android:scaleType="fitCenter"
+            android:id="@+id/imageViewAFFThingsToPack"
+            android:src="@drawable/pack_icon"
+            android:background="@drawable/button_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutAFFShare"
+        android:layout_below="@+id/buttonAFFDone"
+        android:layout_alignBaseline="@+id/linearLayoutAFFThingsToPack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/date_button_background"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="30dp">
+
+
+
+        <TextView
+            android:id="@+id/textViewAFFShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="SHARE"
+            android:textStyle="bold"
+            android:paddingLeft="8dp"
+            android:padding="5dp" />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="true"
+            android:maxHeight="30dp"
+            android:maxWidth="30dp"
+            android:scaleType="fitCenter"
+            android:id="@+id/imageViewAFFShare"
+            android:src="@drawable/share_icon"
+            android:background="@drawable/button_background" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+</ScrollView>

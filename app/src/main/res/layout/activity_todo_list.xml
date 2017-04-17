@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ToDoListActivity"
+    android:background="@drawable/background_white_fabric_texture">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayoutToDo"
+        android:layout_marginTop="10dp"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Planning Status: In Progress"
+            android:id="@+id/textViewPlanningStatus"
+            android:textSize="16sp"
+            android:textColor="@color/inputText"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:background="#d1d0d3"
+            android:padding="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayoutTodoListRow2">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkboxToDoPlanningDone"
+                android:text="Trip Planning Completed?"
+                android:checked="false"
+                android:textSize="14sp"
+                android:textColor="@color/inputText"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutTodoShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/date_button_background"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:baselineAligned="false">
+
+
+
+                <TextView
+                    android:id="@+id/textViewTodoShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:text="Share Itinerary"
+                    android:textStyle="bold"
+                    android:paddingLeft="8dp"
+                    android:padding="5dp" />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="30dp"
+                    android:maxWidth="30dp"
+                    android:scaleType="fitCenter"
+                    android:id="@+id/imageViewTodoShare"
+                    android:src="@drawable/share_icon"
+                    android:background="@drawable/button_background" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayoutToDoAddItem"
+        android:layout_below="@+id/linearLayoutToDo"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px"/>
+
+        <AutoCompleteTextView android:id="@+id/autotext"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:nextFocusUp="@id/autotext"
+            android:nextFocusLeft="@id/autotext"/>
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="38dp"
+            android:ems="10"
+            android:id="@+id/editTextToDoItem"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:hint="Enter To-do Item"
+            android:textSize="16sp"
+            android:layout_margin="5dp"
+            android:textColor="@color/inputText" />
+
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/buttonToDoAddItem"
+            android:src="@drawable/plus_icon"
+            android:layout_toRightOf="@+id/editTextToDoItem"
+            android:textSize="14sp"
+            android:textColor="#494b43"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:layout_alignBottom="@+id/editTextToDoItem"
+            android:layout_margin="5dp"
+            android:background="@drawable/date_button_background" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imageButtonToDoSortLexicographically"
+            android:src="@drawable/sorting_a_to_z_icon"
+            android:layout_toRightOf="@+id/buttonToDoAddItem"
+            android:layout_toEndOf="@+id/buttonToDoAddItem"
+            android:layout_margin="5dp"
+            android:layout_alignBottom="@+id/editTextToDoItem"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayoutToDoList"
+        android:padding="5dp"
+        android:layout_below="@+id/relativeLayoutToDoAddItem">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/recyclerViewToDoList"
+            android:layout_below="@+id/linearLayoutToDo">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

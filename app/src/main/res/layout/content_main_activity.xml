@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_white_fabric_texture"
+    tools:showIn="@layout/activity_main"
+        tools:context=".MainActivity"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="Upcoming Trips"
+                android:id="@+id/button_upcomingTrips"
+                android:layout_gravity="center_horizontal"
+                android:textSize="18sp"
+                android:background="@drawable/date_button_background"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="No Trips to Show"
+                android:id="@+id/textViewMainUpcomingTripDetails"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/background_light"
+                android:maxWidth="300dp"
+                android:textColor="#36458f"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:elevation="@dimen/abc_button_padding_horizontal_material" />
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="CURRENT TRIP"
+                android:id="@+id/button_currentTrip"
+                android:layout_gravity="center_horizontal"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/date_button_background"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewCurrentTripTitle"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/background_light"
+                android:maxWidth="300dp"
+                android:textColor="#36458f"
+                android:ellipsize="end"
+                android:elevation="@dimen/abc_button_padding_horizontal_material"
+                android:gravity="center_horizontal"
+                android:visibility="invisible"
+                android:text="hello"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="PAST TRIPS"
+                android:id="@+id/button_pastTrips"
+                android:layout_gravity="center_horizontal"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/date_button_background"
+                android:textStyle="bold"
+                android:elevation="@dimen/abc_button_inset_horizontal_material"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:text="No Trips to Show"
+                android:id="@+id/textViewMainPastTripDetails"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/background_light"
+                android:maxWidth="300dp"
+                android:textColor="#36458f"
+                android:ellipsize="end"
+                android:elevation="@dimen/abc_button_padding_horizontal_material"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Trip@Ease"
+                android:id="@+id/textView11"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/background_light"
+                android:maxWidth="300dp"
+                android:textColor="#36458f"
+                android:ellipsize="end"
+                android:elevation="@dimen/abc_button_padding_horizontal_material"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:visibility="invisible"/>
+
+
+
+        </LinearLayout>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabTripMoreOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/more_icon"
+            app:backgroundTint="#7e7f7f"
+            android:tint="@color/White"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="90dp"
+            />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabTripAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_input_add"
+            app:backgroundTint="#ff00ddff"
+            android:tint="@color/White"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            />
+    </RelativeLayout>
+
+
+    </ScrollView>

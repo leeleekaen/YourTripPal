@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/background_white_fabric_texture">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Trips"
+        android:id="@+id/textViewTripListTripKind"
+        android:layout_margin="5dp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listViewTLTripList"
+        android:layout_below="@+id/textViewTripListTripKind"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+</RelativeLayout>

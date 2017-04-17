@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="2dp"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cv"
+        android:elevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/contact_card_background">
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayoutRow1"
+                >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBoxAFFrow"
+                    android:checked="false" />
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/textViewAffrowName"
+                    android:hint="Name"
+                    android:textSize="16sp"
+                    android:text="lakshmi"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#182ebe" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBoxAFFfavourite"
+                    style="?android:attr/starStyle"
+                    android:checked="false"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="invisible"/>
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/imageViewDelete"
+                    android:src="@drawable/delete_icon_small"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="invisible"/>
+
+
+
+            </LinearLayout>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayoutRow2"
+                android:layout_below="@+id/linearLayoutRow1"
+                android:layout_marginBottom="5dp">
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/textViewAffrowEmail"
+                    android:hint="Email Id"
+                    android:textSize="14sp"
+                    android:textColor="#182ebe"
+                    android:layout_marginLeft="42dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="lakshmisrao89@gmail.com" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

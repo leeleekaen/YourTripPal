@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_white_fabric_texture">
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/linearLayoutAboutHeading"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Trip Pal"
+        android:id="@+id/textView2"
+        android:textSize="20sp"
+        android:textColor="@color/inputText"
+        android:textStyle="bold"
+ />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageViewAboutAppIcon"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginLeft="5dp" />
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewAboutAppVideoInfo"
+        android:layout_below="@+id/linearLayoutAboutHeading"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:text="To see what YourTripPal can do for you, watch the short video below."
+        android:textColor="@color/screenSecondaryTitle"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp" />
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutAboutAppVideo"
+        android:layout_below="@+id/textViewAboutAppVideoInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/date_button_background"
+        android:clickable="true"
+        android:padding="2dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:elevation="@dimen/abc_edit_text_inset_bottom_material"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:focusable="true">
+
+
+
+        <TextView
+            android:id="@+id/textViewAboutAppVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="YourTripPal App Video"
+            android:textColor="@color/inputText"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="true"
+            android:maxHeight="30dp"
+            android:maxWidth="30dp"
+            android:scaleType="fitCenter"
+            android:id="@+id/imageViewVTIcontacts"
+            android:src="@drawable/play_icon"
+            android:background="@color/inputScreenTitle" />
+    </LinearLayout>
+
+
+
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_below="@+id/linearLayoutAboutAppVideo"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp" />
+
+</RelativeLayout>

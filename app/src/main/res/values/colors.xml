@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3973d1</color>
+    <color name="colorPrimaryDark">#6775cd</color>
+    <color name="colorAccent">#3973d1</color>
+    <color name="White">#ffffff</color>
+    <color name="Red">#FFFF0004</color>
+    <color name="inputText">#182ebe</color>
+    <color name="inputScreenTitle">#4a77fe</color>
+    <color name="ipTxtBackgroung">#b5c8ff</color>
+    <color name="inputEntryErr">#FECACA</color>
+    <color name="screenSecondaryTitle">#50576a</color>
+    <color name="remActivityTitle">#7ea9f9</color>
+
+
+    <!--05f474-->
+</resources>

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_white_fabric_texture">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="lshankarrao.travelatease1.TransportReservationActivity">
+
+
+          <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Transport Type "
+             android:id="@+id/textViewTypeOfTransport"
+             android:textSize="18sp"
+             android:textStyle="bold"
+             android:textColor="@color/inputScreenTitle"
+             android:layout_marginTop="10dp"
+             android:layout_marginBottom="5dp" />
+
+          <Spinner
+               android:id="@+id/spinner1TransportSubKind"
+               android:layout_width="150dp"
+               android:layout_height="40dp"
+               android:layout_toRightOf="@+id/textViewTypeOfTransport"
+               android:background="@android:drawable/btn_dropdown"
+               android:spinnerMode="dropdown" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Departing From"
+               android:id="@+id/textViewTransportStartPlaceInfo"
+               android:layout_below="@+id/textViewTypeOfTransport"
+               android:textSize="18sp"
+               android:textStyle="bold"
+               android:textColor="@color/inputScreenTitle"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="5dp" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Add Place"
+            android:id="@+id/buttonTransportAddStartPlace"
+            android:layout_below="@+id/textViewTransportStartPlaceInfo"
+            android:textColor="@color/inputScreenTitle"
+            android:background="@drawable/date_button_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewTransportStartPlaceDisplay"
+            android:layout_below="@+id/buttonTransportAddStartPlace"
+            android:layout_alignLeft="@+id/buttonTransportAddStartPlace"
+            android:layout_marginLeft="5dp"
+            android:textSize="16sp"
+            android:background="@color/ipTxtBackgroung"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewTransportStartLocImg"
+            android:src="@drawable/ic_location"
+            android:layout_below="@+id/textViewTransportStartPlaceDisplay"
+            android:layout_marginBottom="5dp"
+            android:layout_alignBottom="@+id/textViewTransportReservationStartPlaceAddress"
+            android:visibility="visible"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewTransportReservationStartPlaceAddress"
+            android:layout_below="@+id/textViewTransportStartPlaceDisplay"
+            android:layout_toRightOf="@+id/imageViewTransportStartLocImg"
+            android:gravity="bottom"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"
+            android:textColor="@color/inputText" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="When?"
+               android:id="@+id/textViewTransportReservationTimeDetails"
+               android:layout_below="@+id/textViewTransportReservationStartPlaceAddress"
+               android:textSize="18sp"
+               android:textStyle="bold"
+               android:textColor="@color/inputScreenTitle"
+               android:layout_marginTop="20dp"
+               android:layout_marginBottom="10dp" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Departure Time"
+               android:id="@+id/textViewTransportReservationStartTimings"
+               android:layout_below="@+id/textViewTransportReservationTimeDetails"
+               android:layout_alignParentLeft="true"
+               android:textSize="16sp"
+               android:textStyle="bold"
+               android:textColor="@color/inputScreenTitle"
+               android:layout_marginLeft="5dp" />
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px"/>
+
+        <AutoCompleteTextView android:id="@+id/autotext"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:nextFocusUp="@id/autotext"
+            android:nextFocusLeft="@id/autotext"/>
+
+           <EditText
+               android:layout_width="110dp"
+               android:layout_height="wrap_content"
+               android:id="@+id/editTextTransportReservationStartDate"
+               android:inputType="date"
+               android:layout_below="@+id/textViewTransportReservationStartTimings"
+               android:layout_alignParentLeft="true"
+               android:hint="mm/dd/yyyy"
+               android:textColor="@color/inputText"
+               android:textSize="16sp" />
+
+           <ImageButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/imageButtonTransportStartDate"
+               android:src="@drawable/ic_calendar_date"
+               android:background="@drawable/date_button_background"
+               android:layout_alignTop="@+id/editTextTransportReservationStartDate"
+               android:layout_toRightOf="@+id/editTextTransportReservationStartDate"
+               android:layout_toEndOf="@+id/editTextTransportReservationStartDate" />
+
+           <EditText
+               android:layout_width="85dp"
+               android:layout_height="wrap_content"
+               android:id="@+id/editTextTransportStartTime"
+               android:layout_below="@+id/textViewTransportReservationStartTimings"
+               android:layout_toRightOf="@id/imageButtonTransportStartDate"
+               android:hint="hh:mm"
+               android:layout_marginLeft="15dp"
+               android:inputType="time"
+               android:textColor="@color/inputText"
+               android:textSize="16sp" />
+
+           <ImageButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/imageButtonTransportStartTime"
+               android:src="@drawable/ic_calendar_time"
+               android:background="@drawable/date_button_background"
+               android:layout_alignTop="@+id/editTextTransportStartTime"
+               android:layout_toRightOf="@+id/editTextTransportStartTime"
+               android:layout_toEndOf="@+id/editTextTransportStartTime" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Arrival time"
+               android:id="@+id/textViewTransportReservationEndTimings"
+               android:textSize="16sp"
+               android:textStyle="bold"
+               android:textColor="@color/inputScreenTitle"
+               android:layout_below="@+id/editTextTransportReservationStartDate"
+               android:layout_marginLeft="5dp" />
+
+           <EditText
+               android:layout_width="110dp"
+               android:layout_height="wrap_content"
+               android:id="@+id/editTextTransportReservationEndDate"
+               android:layout_below="@+id/textViewTransportReservationEndTimings"
+               android:layout_alignParentLeft="true"
+               android:hint="mm/dd/yyyy"
+               android:inputType="date"
+               android:textColor="@color/inputText"
+               android:textSize="16sp" />
+
+           <ImageButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/imageButtonTransportEndDate"
+               android:src="@drawable/ic_calendar_date"
+               android:background="@drawable/date_button_background"
+               android:layout_below="@id/textViewTransportReservationEndTimings"
+               android:layout_alignTop="@+id/editTextTransportReservationEndDate"
+               android:layout_toRightOf="@+id/editTextTransportReservationEndDate"
+               android:layout_toEndOf="@+id/editTextTransportReservationEndDate" />
+
+           <EditText
+               android:layout_width="85dp"
+               android:layout_height="wrap_content"
+               android:id="@+id/editTextTransportArrivalTime"
+               android:layout_below="@+id/textViewTransportReservationEndTimings"
+               android:layout_toRightOf="@id/imageButtonTransportEndDate"
+               android:hint="hh:mm"
+               android:layout_marginLeft="15dp"
+               android:inputType="time"
+               android:textColor="@color/inputText"
+               android:textSize="16sp" />
+
+           <ImageButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/imageButtonTransportEndTime"
+               android:src="@drawable/ic_calendar_time"
+               android:background="@drawable/date_button_background"
+               android:layout_below="@id/textViewTransportReservationEndTimings"
+               android:layout_alignTop="@+id/editTextTransportArrivalTime"
+               android:layout_toRightOf="@+id/editTextTransportArrivalTime"
+               android:layout_toEndOf="@+id/editTextTransportArrivalTime" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Arriving to"
+               android:id="@+id/textViewTransportArrivalPlaceText"
+               android:layout_below="@+id/editTextTransportReservationEndDate"
+               android:textSize="18sp"
+               android:textStyle="bold"
+               android:textColor="@color/inputScreenTitle"
+               android:layout_marginTop="20dp"
+               android:layout_marginBottom="5dp" />
+
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Add Place"
+            android:id="@+id/buttonTransportAddEndPlace"
+            android:layout_below="@+id/textViewTransportArrivalPlaceText"
+            android:textColor="@color/inputScreenTitle"
+            android:background="@drawable/date_button_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewTransportEndPlaceDisplay"
+            android:layout_below="@+id/buttonTransportAddEndPlace"
+            android:layout_alignLeft="@+id/buttonTransportAddEndPlace"
+            android:layout_marginLeft="5dp"
+            android:textSize="16sp"
+            android:background="@color/ipTxtBackgroung"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewTransportEndLocImg"
+            android:src="@drawable/ic_location"
+            android:layout_below="@+id/textViewTransportEndPlaceDisplay"
+            android:layout_marginBottom="5dp"
+            android:visibility="visible"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewTransportReservationEndPlaceAddress"
+            android:layout_below="@+id/textViewTransportEndPlaceDisplay"
+            android:layout_toRightOf="@+id/imageViewTransportEndLocImg"
+            android:layout_alignTop="@+id/imageViewTransportEndLocImg"
+            android:gravity="bottom"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"
+            android:textColor="@color/inputText" />
+
+
+
+
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Airlines "
+               android:id="@+id/TextViewTransportCompanyName"
+               android:layout_below="@+id/textViewTransportReservationEndPlaceAddress"
+               android:textSize="18sp"
+               android:textStyle="bold"
+               android:textColor="@color/inputScreenTitle"
+               android:layout_marginTop="20dp"
+               android:layout_marginBottom="10dp" />
+           <EditText
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:inputType="textAutoComplete|text"
+               android:ems="10"
+               android:id="@+id/editTextTransportCompanyName"
+               android:layout_below="@+id/textViewTransportReservationEndPlaceAddress"
+               android:layout_toRightOf="@+id/TextViewTransportCompanyName"
+               android:layout_toEndOf="@+id/TextViewTransportCompanyName"
+               android:layout_alignBaseline="@+id/TextViewTransportCompanyName"
+               android:hint="(optional)"
+               android:textColor="@color/inputText"
+               android:textSize="16sp" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Confirmation # "
+               android:id="@+id/TextViewTransportReservationconfNumber"
+               android:layout_below="@+id/TextViewTransportCompanyName"
+               android:textSize="18sp"
+               android:textStyle="bold"
+               android:textColor="@color/inputScreenTitle"
+               android:layout_marginTop="15dp"
+               android:layout_marginBottom="10dp" />
+           <EditText
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:ems="10"
+               android:id="@+id/editTextTransportConfNumber"
+               android:layout_below="@+id/TextViewTransportCompanyName"
+               android:layout_toRightOf="@+id/TextViewTransportReservationconfNumber"
+               android:layout_toEndOf="@+id/TextViewTransportReservationconfNumber"
+               android:layout_alignBaseline="@+id/TextViewTransportReservationconfNumber"
+
+               android:hint="(optional)"
+               android:textColor="@color/inputText"
+               android:textSize="16sp" />
+
+
+
+           <EditText
+               android:layout_width="match_parent"
+               android:layout_height="100dp"
+               android:id="@+id/editTextTransportNotes"
+               android:layout_below="@+id/TextViewTransportReservationconfNumber"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentStart="true"
+               android:hint="Notes(Optional)"
+               android:textColor="@color/inputText"
+               android:textSize="16sp" />
+
+           <Button
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Done"
+               android:id="@+id/buttonTransportDone"
+               android:layout_below="@+id/editTextTransportNotes"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentEnd="true"
+               android:background="@drawable/button_background"
+               android:textSize="16sp"
+               android:textColor="@color/White" />
+           <Button
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Add an Attachment"
+               android:id="@+id/buttonTransportAttachment"
+               android:layout_below="@+id/editTextTransportNotes"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentStart="true"
+               android:visibility="invisible"/>
+
+
+
+
+    </RelativeLayout>
+</ScrollView>

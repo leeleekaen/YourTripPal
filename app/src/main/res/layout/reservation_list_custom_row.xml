@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="wrap_content"
+    android:background="@drawable/card_background"
+    android:id="@+id/relativeLayoutReservationListCustomRow"
+    android:gravity="center_horizontal"
+    android:elevation="@dimen/abc_alert_dialog_button_bar_height"
+    android:paddingBottom="0dp">
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/img1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="5dp" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Hotel Marriot"
+        android:id="@+id/pos5"
+        android:layout_toRightOf="@+id/img1"
+        android:layout_toEndOf="@+id/img1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/img3"
+        android:layout_alignTop="@+id/pos5"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:src="@drawable/go_icon"
+        android:background="@drawable/card_background" />
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="Check-in"
+        android:id="@+id/pos6"
+        android:layout_below="@+id/img1"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="9:30 AM"
+        android:id="@+id/pos1"
+        android:layout_below="@+id/pos5"
+        android:layout_toRightOf="@+id/pos6"
+        android:layout_toEndOf="@+id/pos6"
+        android:textStyle="bold"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="5th April 2016"
+        android:id="@+id/pos2"
+        android:layout_toRightOf="@+id/pos1"
+        android:layout_below="@id/pos5"
+        android:layout_toEndOf="@+id/pos1"
+        android:layout_margin="5dp"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/img2"
+        android:src="@drawable/ic_location"
+        android:layout_below="@+id/pos1"
+        android:layout_toRightOf="@+id/pos6"
+        android:layout_toEndOf="@+id/pos6"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="123 olive avenue"
+        android:id="@+id/pos3"
+        android:layout_below="@+id/pos1"
+        android:layout_toRightOf="@+id/img2"
+        android:layout_toEndOf="@+id/img2"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Abracadabra"
+        android:id="@+id/pos4"
+        android:layout_below="@+id/img2"
+        android:layout_toRightOf="@id/pos6"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/pos5"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/textViewSpace"
+        android:background="#0b021c"
+        android:layout_below="@+id/pos4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp" />
+
+
+
+
+</RelativeLayout>
+

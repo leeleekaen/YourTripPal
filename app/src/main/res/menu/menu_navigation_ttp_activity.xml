@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/accessories"
+            android:title="Accessories" />
+        <item
+            android:id="@+id/childCare"
+            android:title="Child Care" />
+        <item
+            android:id="@+id/clothes"
+            android:title="Clothes" />
+
+        <item
+            android:id="@+id/documents"
+            android:title="Documents" />
+
+        <item
+            android:id="@+id/electronics"
+            android:title="Electronics" />
+        <item
+            android:id="@+id/makeupKit"
+            android:title="Makeup Kit" />
+        <item
+            android:id="@+id/medicalKit"
+            android:title="Medical Kit" />
+        <item
+            android:id="@+id/personalCare"
+            android:title="Personal Care" />
+
+        <item
+            android:id="@+id/outdoorActivities"
+            android:title="Outdoor Activities" />
+        <item
+            android:id="@+id/waterActivities"
+            android:title="Water Activities" />
+        <item
+            android:id="@+id/snowActivities"
+            android:title="Snow Activities" />
+        <item
+            android:id="@+id/camping"
+            android:title="Camping" />
+
+        <item
+            android:id="@+id/party"
+            android:title="Party" />
+
+        <item
+            android:id="@+id/businessOrEducational"
+            android:title="Business/Educational" />
+
+        <item
+            android:id="@+id/indoorActivities"
+            android:title="Indoor Activities" />
+
+    </group>
+</menu>

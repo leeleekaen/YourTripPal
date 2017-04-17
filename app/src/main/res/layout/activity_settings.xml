@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_white_fabric_texture"
+    android:clickable="false"
+    android:elevation="@dimen/abc_action_button_min_width_material">
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Disable automatic Planning Reminder Notifications"
+        android:id="@+id/checkBoxSettingsDisablePlanRem"
+        android:checked="false"
+        android:textColor="@color/inputText"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/dim_foreground_disabled_material_dark"
+        android:gravity="center_vertical" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Disable automatic Trip Location Based Reminder Notifications"
+        android:id="@+id/checkBoxSettingsDisableLocRem"
+        android:checked="false"
+        android:textSize="16sp"
+        android:textColor="@color/inputText"
+        android:layout_margin="10dp"
+        android:background="@color/dim_foreground_disabled_material_dark"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Uninstall App"
+        android:id="@+id/textViewSettingsUninstall"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/inputText"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingLeft="35dp"
+        android:background="@color/dim_foreground_disabled_material_dark"
+        android:gravity="center_vertical" />
+
+</LinearLayout>

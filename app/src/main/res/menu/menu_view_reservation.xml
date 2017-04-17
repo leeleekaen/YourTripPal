@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ViewReservationActivity">
+
+    <item
+        android:id="@+id/action_deleteTrip"
+        android:icon="@drawable/delete_icon"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="Delete"/>
+
+    <item
+        android:id="@+id/action_editTrip"
+        android:icon="@drawable/edit_icon"
+        android:orderInCategory="120"
+        app:showAsAction="always|withText"
+        android:title="Edit Reservation"/>
+    <!--<item-->
+        <!--android:id="@+id/action_attachment"-->
+        <!--android:icon="@drawable/attachment_icon"-->
+        <!--android:orderInCategory="140"-->
+        <!--app:showAsAction="always|withText"-->
+        <!--android:title="Attachment"/>-->
+
+</menu>

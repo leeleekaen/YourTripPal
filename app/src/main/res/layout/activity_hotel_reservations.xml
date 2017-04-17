@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_white_fabric_texture">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="lshankarrao.travelatease1.HotelReservationActivity">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hotel Details"
+            android:id="@+id/textViewHotelStartPlace"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/inputScreenTitle"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp" />
+
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Add Stay"
+            android:id="@+id/buttonHotelAddOrEdit"
+            android:layout_below="@+id/textViewHotelStartPlace"
+            android:layout_alignLeft="@+id/textViewHotelStartPlace"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"
+            android:background="@drawable/date_button_background"
+            android:textColor="@color/inputScreenTitle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewHotelPlace"
+            android:layout_below="@+id/buttonHotelAddOrEdit"
+            android:layout_alignLeft="@+id/buttonHotelAddOrEdit"
+            android:layout_marginLeft="5dp"
+            android:textSize="16sp"
+            android:background="@color/ipTxtBackgroung"
+            android:textColor="@color/inputText"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewHotelLocImg"
+            android:src="@drawable/ic_location"
+            android:layout_below="@+id/textViewHotelPlace"
+            android:layout_alignBottom="@+id/textViewHotelStartPlaceAddress"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewHotelStartPlaceAddress"
+            android:layout_below="@+id/textViewHotelPlace"
+            android:layout_toRightOf="@+id/imageViewHotelLocImg"
+            android:gravity="bottom"
+            android:textSize="13sp"
+            android:textColor="@color/inputText"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration of Stay"
+            android:id="@+id/textViewHotelReservationTimeDetails"
+            android:layout_below="@+id/textViewHotelStartPlaceAddress"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/inputScreenTitle"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check-in"
+            android:id="@+id/textViewHotelReservationStartTimings"
+            android:layout_below="@+id/textViewHotelReservationTimeDetails"
+            android:layout_alignParentLeft="true"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/inputScreenTitle"
+            android:layout_marginLeft="5dp" />
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px"/>
+
+
+        <AutoCompleteTextView android:id="@+id/autotext"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:nextFocusUp="@id/autotext"
+            android:nextFocusLeft="@id/autotext"/>
+
+        <EditText
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:id="@+id/editTextHotelStartDate"
+            android:layout_below="@+id/textViewHotelReservationStartTimings"
+            android:layout_alignParentLeft="true"
+            android:hint="mm/dd/yyyy"
+            android:textSize="16sp"
+            android:textColor="@color/inputText" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonHotelStartDate"
+            android:src="@drawable/ic_calendar_date"
+            android:background="@drawable/date_button_background"
+            android:layout_alignTop="@+id/editTextHotelStartDate"
+            android:layout_toRightOf="@+id/editTextHotelStartDate"
+            android:layout_toEndOf="@+id/editTextHotelStartDate" />
+
+        <EditText
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:id="@+id/editTextHotelReservationStartTime"
+            android:layout_below="@+id/textViewHotelReservationStartTimings"
+            android:layout_toRightOf="@id/imageButtonHotelStartDate"
+            android:hint="hh:mm"
+            android:layout_marginLeft="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/inputText" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonHotelStartTime"
+            android:src="@drawable/ic_calendar_time"
+            android:background="@drawable/date_button_background"
+            android:layout_alignTop="@+id/editTextHotelReservationStartTime"
+            android:layout_toRightOf="@+id/editTextHotelReservationStartTime"
+            android:layout_toEndOf="@+id/editTextHotelReservationStartTime" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check-out"
+            android:id="@+id/textViewHotelReservationEndTimings"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/inputScreenTitle"
+            android:layout_below="@+id/editTextHotelStartDate"
+            android:layout_marginLeft="5dp" />
+
+        <EditText
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:id="@+id/editTextHotelEndDate"
+            android:layout_below="@+id/textViewHotelReservationEndTimings"
+            android:layout_alignParentLeft="true"
+            android:hint="mm/dd/yyyy"
+            android:textSize="16sp"
+            android:textColor="@color/inputText" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonAddEditTripEndDate"
+            android:src="@drawable/ic_calendar_date"
+            android:background="@drawable/date_button_background"
+            android:layout_below="@id/textViewHotelReservationEndTimings"
+            android:layout_alignTop="@+id/editTextHotelEndDate"
+            android:layout_toRightOf="@+id/editTextHotelEndDate"
+            android:layout_toEndOf="@+id/editTextHotelEndDate" />
+
+        <EditText
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:id="@+id/editTextHotelEndTime"
+            android:layout_below="@+id/textViewHotelReservationEndTimings"
+            android:layout_toRightOf="@id/imageButtonAddEditTripEndDate"
+            android:hint="hh:mm"
+            android:layout_marginLeft="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/inputText" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonHotelEndTime"
+            android:src="@drawable/ic_calendar_time"
+            android:background="@drawable/date_button_background"
+            android:layout_below="@id/textViewHotelReservationEndTimings"
+            android:layout_alignTop="@+id/editTextHotelEndTime"
+            android:layout_toRightOf="@+id/editTextHotelEndTime"
+            android:layout_toEndOf="@+id/editTextHotelEndTime" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirmation #"
+            android:id="@+id/TextViewHotelconfNumber"
+            android:layout_below="@+id/editTextHotelEndTime"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/inputScreenTitle"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editTextHotelConfNumber"
+            android:layout_below="@+id/imageButtonAddEditTripEndDate"
+            android:layout_alignBaseline="@+id/TextViewHotelconfNumber"
+            android:layout_toRightOf="@+id/TextViewHotelconfNumber"
+            android:layout_toEndOf="@+id/TextViewHotelconfNumber"
+            android:hint="(optional)"
+            android:textIsSelectable="false"
+            android:textSize="16sp"
+            android:textColor="@color/inputText" />
+
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/editTextHotelNotes"
+            android:layout_below="@+id/TextViewHotelconfNumber"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:hint="Notes(Optional)"
+            android:textSize="16sp"
+            android:textColor="@color/inputText"
+            android:layout_marginTop="5dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:id="@+id/buttonHotelDone"
+            android:layout_below="@+id/editTextHotelNotes"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/button_background"
+            android:textSize="16sp"
+            android:textColor="@color/White"
+            android:layout_marginTop="5dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add an Attachment"
+            android:id="@+id/buttonHotelAttachment"
+            android:layout_below="@+id/editTextHotelNotes"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="invisible"/>
+
+
+
+        <!--
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextAddress"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="46dp" /> -->
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_white_fabric_texture">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remind me"
+        android:id="@+id/textView8"
+        android:textSize="16sp"
+        android:layout_margin="15dp"
+        android:textColor="#7ea9f9"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroupRemOnOrBefore">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="On"
+                android:id="@+id/radioButtonSTPRon"
+                android:checked="false"
+                android:layout_margin="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/screenSecondaryTitle" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Before"
+                android:id="@+id/radioButtonSTPRbefore"
+                android:checked="false"
+                android:layout_margin="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/screenSecondaryTitle" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayoutSTPROn"
+            android:orientation="horizontal"
+            android:layout_toRightOf="@+id/radioGroupRemOnOrBefore">
+
+            <EditText
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:id="@+id/editTextSTPRRemDate"
+                android:layout_alignParentLeft="true"
+                android:hint="mm/dd/yyyy"
+                android:textSize="16sp"
+                android:textColor="@color/inputText" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButtonSTPRRemDate"
+                android:src="@drawable/ic_calendar_date"
+                android:background="@drawable/date_button_background" />
+
+            <EditText
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:id="@+id/editTextSTPRRemTime"
+                android:hint="hh:mm"
+                android:layout_marginLeft="15dp"
+                android:textSize="16sp"
+                android:textColor="@color/inputText" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButtonSTPRREmTime"
+                android:src="@drawable/ic_calendar_time"
+                android:background="@drawable/date_button_background" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayoutRemBefore"
+            android:layout_toRightOf="@+id/radioGroupRemOnOrBefore"
+            android:layout_below="@+id/linearLayoutSTPROn"
+            android:layout_margin="5dp">
+
+            <EditText
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/editTextSTPRRemNumber"
+                android:textColor="#7ea9f9"
+                android:background="#dadfe2"
+                android:layout_margin="5dp" />
+
+            <Spinner
+                android:id="@+id/spinnerRemType"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@drawable/date_button_background"
+                android:spinnerMode="dropdown"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="of the trip."
+                android:id="@+id/textViewSTPRGenInfo"
+                android:layout_margin="5dp"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trip starts 12th Jun 2016 at 3:30 pm"
+            android:id="@+id/textViewSTPRTripTimingsInfo"
+            android:layout_below="@+id/linearLayoutRemBefore"
+            android:textSize="16sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linearLayoutSTPRtripInfo"
+            android:layout_below="@+id/textViewSTPRTripTimingsInfo">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reminder Message(Optional)"
+                android:id="@+id/textViewSTPRInfoMsg"
+                android:textSize="16sp"
+                android:textColor="#7ea9f9"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp" />
+
+            <LinearLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="0px"
+                android:layout_height="0px"/>
+
+            <!-- :nextFocusUp and :nextFocusLeft have been set to the id of this component
+            to prevent the dummy from receiving focus again -->
+            <AutoCompleteTextView android:id="@+id/autotext"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:nextFocusUp="@id/autotext"
+                android:nextFocusLeft="@id/autotext"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextSTPRMessage"
+                android:layout_gravity="center_horizontal"
+                android:background="#dadfe2"
+                android:textColor="@color/inputText"
+                android:textSize="16sp"
+                android:minHeight="80dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*less than 20 characters"
+                android:id="@+id/textView4"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="14sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Set"
+                android:id="@+id/buttonSTPRset"
+                android:layout_margin="15dp"
+                android:textSize="18sp"
+                android:background="@drawable/button_background"
+                android:textColor="#f9f9fb" />
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayoutSTPRMessageSec"></LinearLayout>
+
+</LinearLayout>

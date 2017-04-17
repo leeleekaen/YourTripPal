@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayoutVTA"
+    tools:showIn="@layout/activity_view_trip_itinerary"
+    tools:context=".ViewTripItineraryActivity"
+    android:background="@drawable/background_plain_black"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutVTIsetReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#fefefe"
+        android:clickable="true"
+        android:padding="2dp"
+        android:orientation="horizontal"
+        android:layout_alignTop="@+id/linearLayoutVTItodoList"
+        android:layout_centerHorizontal="true">
+
+
+
+        <TextView
+            android:id="@+id/textViewVTIsetReminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="Remind"
+            android:textStyle="bold"
+            android:textColor="#5daf49" />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="true"
+            android:maxHeight="30dp"
+            android:maxWidth="30dp"
+            android:scaleType="fitCenter"
+            android:id="@+id/imgShare"
+            android:src="@drawable/reminder_icon"
+            android:background="#39fe23" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutVTIThingsToPack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#fefefe"
+        android:clickable="true"
+        android:padding="2dp"
+        android:orientation="horizontal"
+        android:layout_alignTop="@+id/linearLayoutVTIsetReminder"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp">
+
+
+
+        <TextView
+            android:id="@+id/textViewVTIThingsToPack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="Packing help"
+            android:textStyle="bold"
+            android:textColor="#fe821c" />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="true"
+            android:maxHeight="30dp"
+            android:maxWidth="30dp"
+            android:scaleType="fitCenter"
+            android:id="@+id/imageViewVTIThingsToPack"
+            android:src="@drawable/pack_icon"
+            android:background="#ff8914" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutVTItodoList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#fefefe"
+        android:clickable="true"
+        android:padding="2dp"
+        android:orientation="horizontal"
+        android:layout_alignParentLeft="true"
+        android:elevation="@dimen/abc_edit_text_inset_bottom_material"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:focusable="true">
+
+
+
+        <TextView
+            android:id="@+id/textViewVTItodoList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="Trip Todo"
+            android:textColor="#a76ff1"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="true"
+            android:maxHeight="30dp"
+            android:maxWidth="30dp"
+            android:scaleType="fitCenter"
+            android:id="@+id/imageViewVTItodoList"
+            android:src="@drawable/todo_white_icon"
+            android:background="#c062e6" />
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/linearLayoutVTItitle"
+    android:layout_below="@+id/linearLayoutVTItodoList"
+    android:background="@color/White">
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView"
+        android:src="@mipmap/trip"
+        android:background="#fafafb"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textViewVTATitle"
+        android:textSize="20sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_toRightOf="@id/imageView"
+        android:textColor="#181964"
+        android:background="#ffffff"
+        android:layout_gravity="center_vertical" />
+
+</LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="New Text"
+        android:id="@+id/textViewVTAPlace"
+        android:ellipsize="marquee"
+        android:layout_below="@+id/linearLayoutVTItitle"
+        android:background="#7d7ef5"
+        android:textColor="@android:color/primary_text_dark_nodisable"
+        android:textIsSelectable="false"
+        android:textSize="16dp"
+        android:autoText="false" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="New Text"
+        android:id="@+id/textViewVTADuration"
+        android:layout_below="@+id/textViewVTAPlace"
+        android:background="#3b3c89"
+        android:textColor="@android:color/background_light"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/textViewVTAnoOfEvents"
+        android:layout_below="@+id/textViewVTADuration"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/listViewTLAReservationsList"
+        android:layout_below="@+id/textViewVTAnoOfEvents"
+        android:padding="10dp"
+        android:layout_marginRight="10dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabAddReservation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="#ff00ddff"
+        android:tint="@color/White"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabManageTripMoreOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/more_icon"
+        app:backgroundTint="#7e7f7f"
+        android:tint="@color/White"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="90dp"
+        />
+
+
+
+</RelativeLayout>

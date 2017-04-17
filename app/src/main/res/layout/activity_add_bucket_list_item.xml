@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="fill_parent"
+    tools:context="lshankarrao.travelatease1.AddBucketListItem"
+    android:background="@drawable/background_white_fabric_texture">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Favourite Vacation Destination"
+        android:id="@+id/textViewBLInfo"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/inputScreenTitle"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a Place"
+        android:id="@+id/buttonBLAddPlace"
+        android:layout_below="@+id/textViewBLInfo"
+        android:layout_alignLeft="@+id/textViewBLInfo"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/inputScreenTitle"
+        android:background="@drawable/date_button_background"
+        android:padding="15dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewBLPlace"
+        android:layout_below="@+id/buttonBLAddPlace"
+        android:layout_alignLeft="@+id/buttonBLAddPlace"
+        android:layout_marginLeft="5dp"
+        android:textSize="16sp"
+        android:textColor="@color/inputText"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:background="@color/ipTxtBackgroung" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewBLLocImg"
+        android:src="@drawable/ic_location"
+        android:layout_below="@+id/textViewBLPlace"
+        android:layout_marginBottom="5dp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewBLPlaceAddress"
+        android:layout_below="@+id/textViewBLPlace"
+        android:layout_toRightOf="@+id/imageViewBLLocImg"
+        android:layout_alignBottom="@+id/imageViewBLLocImg"
+        android:gravity="bottom"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/inputText"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Best time to visit?"
+        android:id="@+id/textViewBLInfoAddress"
+        android:layout_below="@+id/textViewBLPlaceAddress"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/inputScreenTitle"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All year long"
+        android:id="@+id/checkBoxBLAllYearLong"
+        android:layout_below="@+id/textViewBLInfoAddress"
+        android:layout_alignLeft="@+id/textViewBLInfoAddress"
+        android:layout_alignStart="@+id/textViewBLInfoAddress"
+        android:checked="false"
+        android:textColor="@color/inputText" />
+    <Spinner
+        android:id="@+id/spinnerBLStartMonth"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/checkBoxBLAllYearLong"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="to"
+        android:id="@+id/textViewBLto"
+        android:layout_below="@+id/checkBoxBLAllYearLong"
+        android:layout_toRightOf="@+id/spinnerBLStartMonth"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_margin="10dp" />
+    <Spinner
+        android:id="@+id/spinnerBLEndMonth"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/checkBoxBLAllYearLong"
+        android:layout_toRightOf="@+id/textViewBLto"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Theme"
+        android:id="@+id/textViewBLChooseTheme"
+        android:layout_below="@+id/spinnerBLStartMonth"
+        android:textColor="@color/inputScreenTitle"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <Spinner
+        android:id="@+id/spinnerBLChooseTheme"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textViewBLChooseTheme"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:layout_marginLeft="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:id="@+id/buttonBLDone"
+        android:layout_below="@+id/spinnerBLChooseTheme"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_background"
+        android:textColor="@color/White" />
+
+
+
+</RelativeLayout>

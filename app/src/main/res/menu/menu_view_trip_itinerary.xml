@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ViewTripItineraryActivity">
+
+
+
+    <item
+        android:id="@+id/action_deleteTrip"
+        android:icon="@drawable/delete_icon"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"
+        android:title="Delete Trip"/>
+
+    <item
+        android:id="@+id/action_editTrip"
+        android:icon="@drawable/edit_icon"
+        android:orderInCategory="120"
+        app:showAsAction="always|withText"
+        android:title="Edit Reservation"/>
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/share_icon"
+        android:orderInCategory="140"
+        app:showAsAction="always|withText"
+        android:title="Share"/>
+
+
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_home"
+        android:orderInCategory="80"
+        app:showAsAction="collapseActionView"
+        android:title="Home"/>
+    <!--<item-->
+        <!--android:id="@+id/action_about"-->
+        <!--android:orderInCategory="90"-->
+        <!--app:showAsAction="collapseActionView"-->
+        <!--android:title="About YourTripPal"/>-->
+
+    <!--<item-->
+        <!--android:id="@+id/action_settings"-->
+        <!--android:orderInCategory="100"-->
+        <!--app:showAsAction="collapseActionView"-->
+        <!--android:title="Settings"/>-->
+
+
+</menu>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ThingsToPackActivity">
+
+    <item
+        android:id="@+id/action_deleteList"
+        android:icon="@drawable/delete_icon"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="Delete"/>
+
+    <item
+        android:id="@+id/action_setReminder"
+        android:icon="@drawable/reminder_icon"
+        android:orderInCategory="120"
+        app:showAsAction="always"
+        android:title="Set Reminder"/>
+
+</menu>
